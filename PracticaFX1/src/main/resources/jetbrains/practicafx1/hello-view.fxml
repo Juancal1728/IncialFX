@@ -1,27 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx"
-      xmlns:fx="http://javafx.com/fxml"
-      fx:controller="controller.HelloController">
-
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
-
-    <Label fx:id="welcomeText" text="Welcome!" />
-
-    <TextField fx:id="txtName" promptText="Enter your name" />
-
-    <TextField fx:id="txtCode" promptText="Enter your code" />
-
-    <TextField fx:id="txtScore" promptText="Enter your score" />
-
-    <Button text="Register User" onAction="#registerUser" />
-
-</VBox>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="613.0" prefWidth="442.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <TableView fx:id="TableView1" layoutX="26.0" layoutY="205.0" prefHeight="360.0" prefWidth="385.0">
+        <columns>
+          <TableColumn fx:id="TableCode" prefWidth="122.0" text="Code" />
+          <TableColumn fx:id="TableName" prefWidth="135.0" text="Name" />
+            <TableColumn fx:id="TableScore" prefWidth="126.0" text="Score" />
+        </columns>
+      </TableView>
+      <HBox fx:id="HboxCode" layoutX="30.0" layoutY="33.0" prefHeight="39.0" prefWidth="262.0">
+         <children>
+            <Label text="Code:  " />
+            <TextField prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </HBox>
+      <HBox layoutX="30.0" layoutY="96.0" prefHeight="39.0" prefWidth="262.0">
+         <children>
+            <Label text="Score:" />
+            <TextField fx:id="HboxScore" prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="HboxName" layoutX="236.0" layoutY="33.0" prefHeight="39.0" prefWidth="198.0">
+         <children>
+            <Label text="Name:" />
+            <TextField prefHeight="25.0" prefWidth="156.0" />
+         </children>
+      </HBox>
+      <Button fx:id="RegisterButtom" layoutX="317.0" layoutY="96.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="97.0" text="Add" />
+   </children>
+</AnchorPane>

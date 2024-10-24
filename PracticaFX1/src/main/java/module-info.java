@@ -7,7 +7,8 @@ module controller {
     requires org.kordamp.bootstrapfx.core;
     requires com.almasb.fxgl.all;
 
-    opens controller to javafx.fxml;
+    opens controller to javafx.fxml, javafx.base;
     exports controller;
+
 
 }

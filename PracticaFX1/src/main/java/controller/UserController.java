@@ -26,6 +26,7 @@ public class UserController {
     public void addUser(User user) {
         this.users.add(user);
     }
+
     public String toString(){
         StringBuilder msg = new StringBuilder();
         for (User user : users) {
